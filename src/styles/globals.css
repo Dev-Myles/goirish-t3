@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('/fonts/Poppins-Medium.ttf');
+}
+
