@@ -2,9 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: 'Poppins-Medium';
-    src: url('/fonts/Poppins-Medium.ttf');
+  font-family: 'Poppins-Medium';
+  src: url('/fonts/Poppins-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'HindSiliguri-Regular';
+  src: url('/fonts/HindSiliguri-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'CinzelDecorative-Bold';
+  src: url('/fonts/CinzelDecorative-Bold.ttf');
+}
+@font-face {
+  font-family: 'Factoria-Ultra';
+  src: url('/fonts/Factoria-Ultra.ttf');
+}
+
+:root{
+  --nd-gold: #bb9645,
+  --nd-blue: #13233c,
+  --nd-green: #4c7e49
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Factoria-Ultra';
+}
