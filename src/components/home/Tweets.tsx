@@ -14,7 +14,11 @@ const Tweets: React.FC = () => {
         <TwitterTimelineEmbed
           sourceType="profile"
           tweetLimit={3}
-          placeholder={<LoadingGif />}
+          placeholder={
+            <div className="relative top-[35%] mx-auto w-fit">
+              <LoadingGif />
+            </div>
+          }
           screenName="NDFootball"
         />
       </div>

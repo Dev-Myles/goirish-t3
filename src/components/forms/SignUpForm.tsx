@@ -29,7 +29,7 @@ const SignUpForm: React.FC = () => {
   const Content: React.FC<{ status: string }> = ({ status }) => {
     if (status === 'loading') {
       return (
-        <div className="h-54 mx-auto mb-3 flex items-center  p-8 text-center text-xl font-bold">
+        <div className="flex min-w-[320px] items-center justify-center lg:w-[560px]">
           <LoadingGif />
         </div>
       );
@@ -50,7 +50,7 @@ const SignUpForm: React.FC = () => {
       return (
         <div className="h-54 mx-auto mb-3 flex flex-col items-center p-8 text-center text-xl font-bold">
           <p className="mb-3 text-ndGreen">
-            Thank you, your request has successfully been submitted. Go Irish!
+            Thank you, your request has been submitted. Go Irish!
           </p>
           <Image
             src={'/images/ndbluelogo.svg'}
@@ -213,9 +213,11 @@ const SignUpForm: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="w-11/12 text-start text-3xl text-ndBlue">Email Service</h3>
+      <h3 className="w-11/12 max-w-xl text-start text-3xl text-ndBlue ">
+        Email Service
+      </h3>
       <form
-        className="mx-auto h-fit w-11/12 max-w-xl rounded-xl bg-white p-4 font-hind shadow sm:mx-0 sm:w-11/12 [&>label>input]:bg-slate-50 [&>label]:font-hind [&>label]:text-xl"
+        className="mx-auto  min-h-[500px] w-11/12 max-w-xl rounded-xl bg-white p-4 font-hind shadow sm:mx-0 [&>label>input]:bg-slate-50 [&>label]:font-hind [&>label]:text-xl"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h4
@@ -224,7 +226,9 @@ const SignUpForm: React.FC = () => {
         >
           Sign up
         </h4>
-        <Content status={status} />
+        <div className="grid min-h-[490px] place-content-center">
+          <Content status={status} />
+        </div>
       </form>
     </div>
   );

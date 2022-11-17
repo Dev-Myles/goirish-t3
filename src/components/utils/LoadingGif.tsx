@@ -7,7 +7,7 @@ const LoadingGif: React.FC = () => {
       src={'/gifs/785.svg'}
       width={80}
       height={80}
-      className="relative top-[35%] mx-auto"
+      className=""
     />
   );
 };

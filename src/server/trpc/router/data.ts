@@ -6,12 +6,12 @@ export const dataFetching = router({
     .input(userDataSchema)
     .mutation(async ({ input, ctx }) => {
       try {
-        const createEmailReq = await ctx.prisma.userSignup.create({
-          data: {
-            ...input,
-          },
-        });
-        return console.log(createEmailReq);
+        // const createEmailReq = await ctx.prisma.userSignup.create({
+        //   data: {
+        //     ...input,
+        //   },
+        // });
+        return console.log(input);
       } catch (error) {
         console.log(error);
       }
