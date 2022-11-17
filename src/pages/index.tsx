@@ -6,12 +6,16 @@ import Tweets from '../components/home/Tweets';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="mx-auto w-fit">
       <TopBanner />
-      <Tweets />
-      <MappedLinks data={LinkData} />
-      <SignUpForm />
-    </>
+      <div className="flex flex-col-reverse justify-center gap-2 lg:flex-row">
+        <div className="flex max-w-xl flex-col items-center">
+          <Tweets />
+          <MappedLinks data={LinkData} />
+        </div>
+        <SignUpForm />
+      </div>
+    </div>
   );
 };
 

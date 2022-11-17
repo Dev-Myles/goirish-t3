@@ -3,12 +3,12 @@ import LoadingGif from '../../components/utils/LoadingGif';
 
 const Tweets: React.FC = () => {
   return (
-    <div className="mx-auto my-4 w-11/12 max-w-lg text-start">
+    <div className="my-4 w-11/12 max-w-lg text-start lg:my-0">
       <h3 className="text-center text-3xl text-ndBlue">
-        Notre Dame FB Twitter
+        Offical Football Twitter
       </h3>
       <div
-        className="mx-auto h-72 w-full overflow-y-scroll rounded-xl
+        className="mx-auto h-96 w-full overflow-y-scroll rounded-xl
      shadow-xl"
       >
         <TwitterTimelineEmbed
