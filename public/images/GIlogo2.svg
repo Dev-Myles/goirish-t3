@@ -516,14 +516,16 @@
        style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:semi-condensed;font-size:61.5447px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Oblique Semi-Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.53862"
        inkscape:path-effect="#path-effect1082"
        transform="translate(325.16697,158.36119)" />
-    <text
-       xml:space="preserve"
+    <g
+       aria-label="@"
+       transform="matrix(10.466568,0,0,8.7073933,1621.2572,411.3667)"
        id="text1061"
-       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Cinzel Decorative';-inkscape-font-specification:'Cinzel Decorative, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1063);fill:#002255;fill-opacity:1;stroke:none;stroke-width:0.1650859;stroke-miterlimit:4;stroke-dasharray:none;"
-       transform="matrix(10.466568,0,0,8.7073933,1621.2572,411.3667)"><tspan
-         x="-208.93555"
-         y="-64.467527"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:10.5833px;font-family:'Cinzel Decorative';-inkscape-font-specification:'Cinzel Decorative, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#002255;stroke:none;stroke-width:0.165086;stroke-miterlimit:4;stroke-dasharray:none">@</tspan></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Cinzel Decorative';-inkscape-font-specification:'Cinzel Decorative, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1063);fill:#002255;fill-opacity:1;stroke:none;stroke-width:0.165086;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         d="m -208.04655,-65.674023 q -0.67733,-0.582081 -0.67733,-1.619245 0,-0.613831 0.28575,-1.354662 0.43391,-1.05833 1.37583,-1.830911 0.94191,-0.772581 2.20132,-1.111246 0.8255,-0.22225 1.48167,-0.22225 2.67757,0 3.87348,1.386413 0.87842,1.02658 0.87842,2.497658 0,1.746245 -1.04775,3.026824 -1.04775,1.269996 -2.83632,1.650995 -0.51859,0.116416 -1.10067,0.116416 -1.39699,0 -3.12207,-0.666748 l -0.0423,-0.105833 q 1.13241,0.465665 2.13782,0.465665 1.3335,0 2.38125,-0.666748 0.86783,-0.571498 1.38641,-1.555745 0.61383,-1.132413 0.61383,-2.412992 0,-1.280579 -0.46567,-2.05316 -0.52916,-0.888997 -1.59807,-1.132413 -0.41275,-0.07408 -0.64559,-0.07408 -0.23283,0 -0.28574,0 -0.92075,0.02117 -1.92617,0.709081 -0.98424,0.677331 -1.61924,2.031993 -0.55033,1.142997 -0.55033,2.021411 0,0.455082 0.16933,0.656164 0.16933,0.1905 0.35983,0.201083 0.1905,0.01058 0.32809,-0.04233 0.14816,-0.05292 0.27516,-0.137583 0.127,-0.08467 0.254,-0.211666 0.13758,-0.127 0.254,-0.253999 0.11642,-0.137583 0.23283,-0.296333 0.127,-0.169333 0.23283,-0.306915 0.26459,-0.380999 0.42334,-0.582082 l 1.34408,-1.830911 q 0.48683,-0.603248 0.58208,-0.814914 h 0.0635 l 0.88899,4.275653 q 0.0952,0.497415 0.42334,0.497415 h 0.0529 l -0.0212,0.07408 h -2.51883 l 0.0106,-0.07408 h 0.0741 q 0.15875,0 0.29633,-0.126999 0.14817,-0.127 0.14817,-0.22225 0,-0.105833 -0.0106,-0.148166 l -0.0847,-0.560915 h -1.43933 q -0.508,0.656165 -0.89958,0.941914 -0.42334,0.296332 -1.02658,0.296332 -0.60325,0 -1.11125,-0.433915 z m 4.22274,-2.455325 -0.89958,1.280579 h 1.10066 z"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:10.5833px;font-family:'Cinzel Decorative';-inkscape-font-specification:'Cinzel Decorative, Heavy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#002255;stroke:none;stroke-width:0.165086;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path937" />
+    </g>
     <g
        aria-label="Go Irish "
        transform="matrix(0.65537044,0,0,0.67089228,-327.82137,-93.308324)"
