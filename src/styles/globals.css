@@ -22,13 +22,11 @@
 }
 
 :root{
-  --nd-gold: #bb9645,
+  --nd-gold: #d3bc5f,
   --nd-blue: #13233c,
   --nd-green: #4c7e49
 }
-body{
-  background-color: rgb(248 250 252);
-}
+
 
 h1,
 h2,

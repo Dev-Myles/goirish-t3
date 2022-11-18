@@ -12,7 +12,7 @@ const DefaultHeadTags: React.FC = () => {
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/images/ndlogo.png"
+        href="/images/GIlogo2.svg"
       />
     </Head>
   );

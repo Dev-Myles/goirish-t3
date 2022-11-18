@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ImUser } from 'react-icons/im';
 import { MdAlternateEmail } from 'react-icons/md';
 import { HiOutlineMail } from 'react-icons/hi';
+import Link from 'next/link';
 
 interface SubmitEmailRequest {
   firstName: string;
@@ -18,7 +19,6 @@ const SignUpForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<SubmitEmailRequest>();
 
@@ -28,11 +28,7 @@ const SignUpForm: React.FC = () => {
 
   const Content: React.FC<{ status: string }> = ({ status }) => {
     if (status === 'loading') {
-      return (
-        <div className="flex min-w-[320px] items-center justify-center lg:w-[560px]">
-          <LoadingGif />
-        </div>
-      );
+      return <LoadingGif />;
     }
 
     if (status === 'error') {
@@ -50,29 +46,27 @@ const SignUpForm: React.FC = () => {
       return (
         <div className="h-54 mx-auto mb-3 flex flex-col items-center p-8 text-center text-xl font-bold">
           <p className="mb-3 text-ndGreen">
-            Thank you, your request has been submitted. Go Irish!
+            Thank you, your request has been submitted. You will receive an
+            email from us regarding your account.
           </p>
           <Image
-            src={'/images/ndbluelogo.svg'}
-            alt="Notre Dame logo"
+            src={'/images/GIlogo2.svg'}
+            alt="Go Irish logo"
             height={75}
-            width={75}
+            width={150}
           />
         </div>
       );
     }
 
     return (
-      <>
-        <p className="my-4 text-lg text-ndBlue">
-          By signing up for our email service you will receive a @goirish.com
-          email and join our mailing list.
-        </p>
+      <div className="flex w-full flex-col justify-start [&>label>input]:bg-slate-200">
         <label className="relative my-2 flex flex-col">
           First Name
           <input
             className="rounded-sm p-1 pl-8"
             type="text"
+            placeholder="John"
             {...register('firstName', {
               required: 'First name is required',
               pattern: {
@@ -89,7 +83,7 @@ const SignUpForm: React.FC = () => {
               },
             })}
           />
-          <div className="absolute top-9 left-2 text-ndGreen">
+          <div className="absolute top-9 left-2 text-ndGold">
             <ImUser />
           </div>
           {
@@ -103,6 +97,7 @@ const SignUpForm: React.FC = () => {
           <input
             className="rounded-sm p-1 pl-8"
             type="text"
+            placeholder="Stone"
             {...register('lastName', {
               required: 'Last name is required',
               pattern: {
@@ -119,7 +114,7 @@ const SignUpForm: React.FC = () => {
               },
             })}
           />
-          <div className="absolute top-9 left-2 text-ndGreen">
+          <div className="absolute top-9 left-2 text-ndGold">
             <ImUser />
           </div>
           {
@@ -129,10 +124,11 @@ const SignUpForm: React.FC = () => {
           }
         </label>
         <label className="relative my-2 flex flex-col ">
-          Email
+          Current Email
           <input
             className="rounded-sm p-1 pl-8"
             type="text"
+            placeholder="youremail@email.com"
             {...register('email', {
               required: 'Email is required',
               pattern: {
@@ -150,7 +146,7 @@ const SignUpForm: React.FC = () => {
               },
             })}
           />
-          <div className="absolute top-9 left-2 text-ndGreen">
+          <div className="absolute top-9 left-2 text-ndGold">
             <HiOutlineMail />
           </div>
           {<span className="h-4 text-red-500">{errors?.email?.message}</span>}
@@ -160,25 +156,29 @@ const SignUpForm: React.FC = () => {
           <input
             className="rounded-sm p-1 pl-8"
             type="text"
+            maxLength={30}
+            placeholder="John"
             {...register('desiredEmail', {
               required: 'Email is required',
               pattern: {
-                value:
-                  /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/,
-                message: 'Must contain @ and .com/net/etc',
+                value: /^[A-Za-z0-9 ]+$/i,
+                message: 'can only contain letters or numbers',
               },
               maxLength: {
-                value: 50,
+                value: 30,
                 message: 'Max of 50 characters',
               },
               minLength: {
-                value: 10,
+                value: 2,
                 message: 'Min of 10 characters',
               },
             })}
           />
-          <div className="absolute top-9 left-2 text-ndGreen">
+          <div className="absolute top-9 left-2 text-ndGold">
             <MdAlternateEmail />
+          </div>
+          <div className="absolute top-7 right-2 text-ndBlue">
+            <span>@goirish.com</span>
           </div>
           {
             <span className="h-4 text-red-500">
@@ -194,7 +194,16 @@ const SignUpForm: React.FC = () => {
               required: 'Agreement is required',
             })}
           />
-          Agree to Terms and Conditions
+          <span>
+            Agree to{' '}
+            <Link href="/" className=" font-bold text-ndGreen underline">
+              Terms
+            </Link>{' '}
+            and{' '}
+            <Link href="/" className=" font-bold text-ndGreen underline">
+              Conditions
+            </Link>
+          </span>
         </label>
         <span className="block h-4 pl-12 text-red-500">
           {errors?.terms?.message}
@@ -207,30 +216,34 @@ const SignUpForm: React.FC = () => {
             className=" rounded-xl border-[1px] border-ndGold bg-ndBlue py-1 px-8 font-fact text-white shadow duration-300 ease-in-out hover:scale-105 hover:cursor-pointer"
           />
         </div>
-      </>
+      </div>
     );
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <h3 className="w-11/12 max-w-xl text-start text-3xl text-ndBlue ">
-        Email Service
-      </h3>
-      <form
-        className="mx-auto  min-h-[500px] w-11/12 max-w-xl rounded-xl bg-white p-4 font-hind shadow sm:mx-0 [&>label>input]:bg-slate-50 [&>label]:font-hind [&>label]:text-xl"
-        onSubmit={handleSubmit(onSubmit)}
+    <form
+      className=" mx-auto  min-h-[500px] w-full max-w-xl p-4   font-hind sm:my-4 sm:w-11/12 sm:rounded-xl lg:mx-0 lg:ml-[10%] [&>label]:font-hind [&>label]:text-xl"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <h4
+        className=" font-fact text-4xl font-bold
+         text-ndBlue opacity-100 drop-shadow"
       >
-        <h4
-          className=" font-fact text-4xl font-bold
-         text-ndGold drop-shadow"
-        >
-          Sign up
-        </h4>
-        <div className="grid min-h-[490px] place-content-center">
-          <Content status={status} />
-        </div>
-      </form>
-    </div>
+        Sign up
+      </h4>
+      <div className="flex min-h-[490px] items-center justify-center">
+        <Content status={status} />
+      </div>
+      <div className="mx-auto flex h-fit w-fit items-center justify-center">
+        <span className="text-lg font-bold">Powered by</span>
+        <Image
+          src={'/images/networksol.png'}
+          alt="network solutions logo"
+          height={50}
+          width={150}
+        />
+      </div>
+    </form>
   );
 };
 

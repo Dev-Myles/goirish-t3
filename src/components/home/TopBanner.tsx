@@ -1,19 +1,18 @@
 import Image from 'next/image';
+import imageSrc from '../../../public/images/GIlogo2.svg';
 
 const TopBanner: React.FC = () => {
-  const currentYear = new Date().getFullYear();
   return (
-    <div className="my-4 text-center font-hind text-2xl text-ndGold">
-      <h1 className="font-ciz text-4xl">FIGHTING IRISH</h1>
-      <h2 className="text-ndGreen">{currentYear} Football Season</h2>
-      <Image
-        src={'/images/clover.png'}
-        alt="clover image"
-        height={50}
-        width={50}
-        className="mx-auto"
-      />
-    </div>
+    <>
+      <div className="p-4">
+        <Image src={imageSrc} alt="logo" className="mx-auto" />
+      </div>
+      <div className="flex h-1/2 flex-col items-center justify-center p-5 font-fact text-zinc-800">
+        <p className="text-5xl font-bold  ">
+          Stand out with pride. Join Go Irish
+        </p>
+      </div>
+    </>
   );
 };
 

@@ -13,7 +13,7 @@ module.exports = {
         DEFAULT: '0 0 5px silver',
       },
       colors: {
-        ndGold: '#bb9645',
+        ndGold: '#f0cb37',
         ndBlue: '#13233c',
         ndGreen: '#4c7e49',
       },

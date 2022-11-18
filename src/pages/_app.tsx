@@ -10,8 +10,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
       <DefaultHeadTags />
-      <Navbar />
-      <div className="min-h-screen bg-slate-50">
+
+      <div className="">
         <Component pageProps={pageProps} />
       </div>
       <DefaultFooter />

@@ -1,15 +1,6 @@
-import Image from 'next/image';
-
 const Navbar: React.FC = () => {
   return (
-    <div className="flex justify-center border-b-2 border-ndGold bg-white p-1">
-      <Image
-        alt="Notre Dame Logo"
-        src={'/images/ndbluelogo.svg'}
-        height={40}
-        width={40}
-      />
-    </div>
+    <div className="mx-auto flex h-4 w-1/2 justify-center border-b-2 border-ndGold p-1 text-3xl text-ndGold"></div>
   );
 };
 
