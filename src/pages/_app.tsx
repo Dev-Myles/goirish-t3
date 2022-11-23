@@ -4,7 +4,6 @@ import DefaultHeadTags from '../components/structure/Head';
 import { trpc } from '../utils/trpc';
 
 import '../styles/globals.css';
-import Navbar from '../components/structure/Navbar';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (

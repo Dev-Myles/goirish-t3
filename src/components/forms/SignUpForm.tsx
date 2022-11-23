@@ -24,7 +24,17 @@ const SignUpForm: React.FC = () => {
 
   const onSubmit = (data: SubmitEmailRequest) => mutate(data);
 
-  const { mutate, status } = trpc.data.userSignUp.useMutation();
+  const { mutate, status, error } = trpc.data.userSignUp.useMutation();
+
+  
+
+  if(error){
+    return(
+      <div>
+        <span>{error.data?.httpStatus}</span>
+      </div>
+    ) 
+  }
 
   const Content: React.FC<{ status: string }> = ({ status }) => {
     if (status === 'loading') {
@@ -40,17 +50,17 @@ const SignUpForm: React.FC = () => {
           </p>
         </div>
       );
-    }
+    } 
 
     if (status === 'success') {
       return (
         <div className="h-54 mx-auto mb-3 flex flex-col items-center p-8 text-center text-xl font-bold">
-          <p className="mb-3 text-ndGreen">
+          <p className="mb-3 text-green-600">
             Thank you, your request has been submitted. You will receive an
             email from us regarding your account.
           </p>
           <Image
-            src={'/images/GIlogo2.svg'}
+            src={'/images/clover.png'}
             alt="Go Irish logo"
             height={75}
             width={150}
@@ -196,11 +206,11 @@ const SignUpForm: React.FC = () => {
           />
           <span>
             Agree to{' '}
-            <Link href="/" className=" font-bold text-ndGreen underline">
+            <Link href="/" className=" font-bold text-green-600 underline">
               Terms
             </Link>{' '}
             and{' '}
-            <Link href="/" className=" font-bold text-ndGreen underline">
+            <Link href="/" className=" font-bold text-green-600 underline">
               Conditions
             </Link>
           </span>
@@ -229,7 +239,7 @@ const SignUpForm: React.FC = () => {
         className=" font-fact text-4xl font-bold
          text-ndBlue opacity-100 drop-shadow"
       >
-        Sign up
+        Sign up for a GoIRISH email
       </h4>
       <div className="flex min-h-[490px] items-center justify-center">
         <Content status={status} />
